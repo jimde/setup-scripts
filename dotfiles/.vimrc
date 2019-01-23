@@ -9,3 +9,6 @@ set shiftwidth=4
 set expandtab
 set number
 set cursorline
+
+autocmd FileType make setlocal noexpandtab
+
