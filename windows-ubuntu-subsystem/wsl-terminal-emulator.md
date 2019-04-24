@@ -1,6 +1,7 @@
 # Windows WSL Terminal Emulator Setup
 
 https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-wsl/
+https://sourceforge.net/projects/vcxsrv/
 
 `export DISPLAY=:0`
 
