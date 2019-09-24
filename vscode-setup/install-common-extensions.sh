@@ -6,3 +6,4 @@ code --list-extensions
 code --install-extension bierner.markdown-preview-github-styles
 code --install-extension eamodio.gitlens
 code --install-extension robertohuertasm.vscode-icons
+code --install-extension streetsidesoftware.code-spell-checker
