@@ -1,0 +1,33 @@
+# #!/bin/bash
+
+# BUILDAREAENV="buildarea4/jdeng1"
+# HOSTENV="yow-ssp5-lx"
+
+# echo ">>> RUNNING $HOSTENV CONFIG <<<"
+
+# export my_WASSP_HOME="/$BUILDAREAENV/wassp-repos"
+# export VXWORKS_DIR="/$BUILDAREAENV/vx7-integration"
+# export VXWORKS_GIT_HOME="http://vxgit.wrs.com/scm/vx7/vxworks.git"
+# export VXWORKS_GIT_BRANCH="vx7-integration"
+# export my_EZTEST_HOME="/$BUILDAREAENV/hv-tools/eztest/"
+# export my_PRODUCT_HOME="/$BUILDAREAENV/vx7-integration/"
+
+# if [[ $PATH != *wassp-repos* ]]; then
+#     export PATH="${my_WASSP_HOME}/wassp/host/scheduler/bin:${my_WASSP_HOME}/wassp-nest/tools/bin:${PATH}"
+# fi
+
+# alias eztest="/$BUILDAREAENV/hv-tools/eztest/eztest"
+# alias ezretest="/$BUILDAREAENV/hv-tools/eztest/ezretest"
+# alias ezchangetest="/$BUILDAREAENV/hv-tools/eztest/ezchangetest"
+# alias vlmstart="/folk/vlm/bin/vlmstart"
+
+# alias ba="cd /$BUILDAREAENV/"
+
+# echo "my_WASSP_HOME: $my_WASSP_HOME"
+# echo "VXWORKS_DIR: $VXWORKS_DIR"
+# echo "VXWORKS_GIT_HOME: $VXWORKS_GIT_HOME"
+# echo "VXWORKS_GIT_BRANCH: $VXWORKS_GIT_BRANCH"
+# echo "my_EZTEST_HOME: $my_EZTEST_HOME"
+# echo "my_PRODUCT_HOME: $my_PRODUCT_HOME"
+
+# echo ">>> END OF $HOSTENV CONFIG <<<"

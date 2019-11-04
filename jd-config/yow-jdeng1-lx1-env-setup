@@ -1,0 +1,4 @@
+#!/bin/bash
+
+alias ssp6="ssh -XC jdeng1@yow-ssp6-lx"
+alias ssp5="ssh -XC jdeng1@yow-ssp5-lx"

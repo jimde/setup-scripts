@@ -1,0 +1,7 @@
+[diff]
+	tool = meld
+[user]
+	name = Jimmy Deng
+	email = Jimmy.Deng@windriver.com
+[push]
+	default = simple

@@ -1,0 +1,82 @@
+#!/bin/bash
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
+
+RESET_ALL="\[\033[0m\]"
+
+RED_BACK="\[\033[41m\]"
+RESET_BACK="\[\033[49m\]"
+
+MAGENTA="\[\033[35m\]"
+WHITE="\[\033[00m\]"
+GREEN="\[\033[01;32m\]"
+BLUE="\[\033[01;34m\]"
+CYAN="\[\033[36m\]"
+RESET="\[\033[39m\]"
+YELLOW="\[\033[33m\]"
+RED="\[\033[31m\]"
+
+PROMPT_USER="${GREEN}\u"
+PROMPT_HOST="${GREEN}\h"
+PROMPT_PATH="${BLUE}\w"
+PROMPT_PATH_SHORT="${CYAN}\W"
+PROMPT_PATH_LONG="${BLUE}\w"
+PROMPT_MINIMAL="${CYAN}\W > ${RESET}"
+
+shell_prompt() {
+    STATUS="$?"
+
+    if [[ "${STATUS}" -eq 0 ]]; then
+        PROMPT_STATUS=""
+    else
+        PROMPT_STATUS="${RESET}${RED_BACK}[${STATUS}]${RESET_BACK}"
+    fi
+
+    if [[ "${SHLVL}" -eq 1 ]]; then
+        PROMPT_SHLVL=""
+    else
+        PROMPT_SHLVL="${RESET}${YELLOW}[${SHLVL}]${RESET}"
+    fi
+
+    PROMPT_GIT="${MAGENTA} $(parse_git_branch)"
+
+    #PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${WHITE}: ${BLUE}\w${WHITE}${MAGENTA}\$(parse_git_branch)${PROMPT_SHLVL}${PROMPT_STATUS}${WHITE}\$ "
+
+    PS1="${PROMPT_HOST}${WHITE}: ${PROMPT_PATH}${WHITE}${PROMPT_GIT}${PROMPT_SHLVL}${PROMPT_STATUS}${WHITE}\$ "
+    PS4="\$"
+}
+
+pshort() {
+    PROMPT_COMMAND="shell_prompt"
+    PROMPT_PATH="${PROMPT_PATH_SHORT}"
+    echo "> Using short prompt"
+}
+
+plong() {
+    PROMPT_COMMAND="shell_prompt"
+    PROMPT_PATH="${PROMPT_PATH_LONG}"
+    echo "> Using long prompt"
+}
+
+ptog() {
+    if [[ "${PROMPT_PATH}" != "${PROMPT_PATH_LONG}" ]]; then
+        plong
+    else
+        pshort
+    fi
+}
+
+pmin() {
+    if [[ "${PS1}" != "${PROMPT_MINIMAL}" ]]; then
+        unset PROMPT_COMMAND
+        PS1="${PROMPT_MINIMAL}"
+        PROMPT_PATH=""
+    else
+        plong
+        PROMPT_COMMAND="shell_prompt"
+    fi
+}
+
+PROMPT_COMMAND="shell_prompt"

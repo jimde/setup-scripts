@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export GIT_EDITOR=vim
+
+# Coverity
+export PREVENT="/net/yow-nas1/vol/vol9/software/cov-analysis/Prevent/prevent.pl"
+export PREVENT_DIR="/net/yow-nas1/vol/vol9/software/cov-analysis/bin/"

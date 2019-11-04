@@ -1,0 +1,18 @@
+#!/bin/bash
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ls="ls --color=auto"
+alias ll="ls -la --color=auto"
+
+alias grep="grep --color"
+alias gitk="gitk --all &"
+
+alias eztest="${JD_WORKSPACE}/hv-tools/eztest/eztest"
+alias ezretest="${JD_WORKSPACE}/hv-tools/eztest/ezretest"
+alias ezchangetest="${JD_WORKSPACE}/hv-tools/eztest/ezchangetest"
+alias vlmstart="/folk/vlm/bin/vlmstart"
+
+alias ba="cd ${JD_WORKSPACE}"
+alias vx="cd ${JD_WORKSPACE}/vx7-integration/"
