@@ -1,0 +1,7 @@
+[diff]
+	tool = meld
+[user]
+	name = Jimmy Deng
+	email = livingoscilloscope@gmail.com
+[push]
+	default = simple

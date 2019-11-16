@@ -1,0 +1,12 @@
+#!/bin/bash
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ls="ls --color=auto"
+alias ll="ls -la --color=auto"
+
+alias grep="grep --color"
+alias gitk="gitk --all &"
+
+alias ba="cd ${JD_WORKSPACE}"
