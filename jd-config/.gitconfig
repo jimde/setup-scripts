@@ -1,7 +1,5 @@
-[diff]
-	tool = meld
 [user]
-	name = Jimmy Deng
+	name = jimmy
 	email = livingoscilloscope@gmail.com
 [push]
 	default = simple
