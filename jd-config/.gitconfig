@@ -1,5 +1,18 @@
 [user]
 	name = jimmy
 	email = livingoscilloscope@gmail.com
+
 [push]
 	default = simple
+
+[core]
+	editor = vim
+
+[url "git@github.com"]
+	insteadOf = gh
+
+[url "https://github.com"]
+	insteadOf = ghh
+
+[color]
+	ui = auto
