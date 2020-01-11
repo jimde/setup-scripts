@@ -2,15 +2,16 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
-
-export JD_WORKSPACE="~/Documents/"
 
 # Common stuff
 
 if [ -z ${JD_CONFIG+x} ]; then
-	export JD_CONFIG="~/Documents/setup-scripts/jd-config/"
+    export JD_CONFIG="~/Documents/setup-scripts/jd-config/"
+    export JD_WORKSPACE="~/Documents/"
+else
+    export JD_WORKSPACE="${JD_CONFIG}/../../"
 fi
 
 export PATH="$PATH:$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/sfw/bin:/opt/sfw/sbin:/usr/sfw/bin:/usr/fw/sbin"

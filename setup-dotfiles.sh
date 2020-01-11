@@ -32,7 +32,7 @@ if [ -f ${HOME}/.bashrc ]; then
         cp ${HOME}/.bashrc ${HOME}/.bashrc-${NOW}.bak
 
         echo -e "\n\n################################" >> ${HOME}/.bashrc
-        echo "# appended using setup-dotfiles.sh" >> ${HOME}/.bashrc
+        echo "# appended using setup-dotfiles.sh - ${NOW}" >> ${HOME}/.bashrc
         echo -e "################################\n" >> ${HOME}/.bashrc
         echo "export JD_CONFIG=\"${SETUP_ROOT}/jd-config\"" >> ${HOME}/.bashrc
         echo "source ${SETUP_ROOT}/jd-config/.bashrc" >> ${HOME}/.bashrc
