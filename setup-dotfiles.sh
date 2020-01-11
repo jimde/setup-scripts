@@ -26,6 +26,7 @@ for f in "${dotfiles_symlink[@]}"; do
     ln -s ${SETUP_ROOT}/jd-config/${f} ${HOME}/${f}
 done
 
+# source custom .bashrc from existing .bashrc
 if [ -f ${HOME}/.bashrc ]; then
         echo "> ${HOME}/.bashrc exists"
         echo "> making backup at ${HOME}/.bashrc-${NOW}.bak"
