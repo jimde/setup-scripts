@@ -7,11 +7,13 @@ fi
 
 # Common stuff
 
+# check for env variables
 if [ -z ${JD_CONFIG+x} ]; then
-    export JD_CONFIG="~/Documents/setup-scripts/jd-config/"
-    export JD_WORKSPACE="~/Documents/"
-else
-    export JD_WORKSPACE="${JD_CONFIG}/../../"
+    echo "Error: missing environment variable: JD_CONFIG (path to jd-config directory)"
+fi
+
+if [ -z ${JD_WORKSPACE+x} ]; then
+    echo "Error: missing environment variable: JD_WORKSPACE (path to projects directory)"
 fi
 
 export PATH="$PATH:$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/sfw/bin:/opt/sfw/sbin:/usr/sfw/bin:/usr/fw/sbin"

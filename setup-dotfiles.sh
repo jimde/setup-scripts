@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# check for env variables
+if [ -z ${JD_CONFIG+x} ]; then
+    echo "Error: missing environment variable: JD_CONFIG (path to jd-config directory)"
+    MISSING_ENV=true
+fi
+
+if [ -z ${JD_WORKSPACE+x} ]; then
+    echo "Error: missing environment variable: JD_WORKSPACE (path to projects directory)"
+    MISSING_ENV=true
+fi
+
+if [ "${MISSING_ENV}" == true ]; then
+    exit 1
+fi
+
 SETUP_ROOT=$(pwd)
 
 # dotfiles which should be replaced with symlinks
@@ -35,7 +50,8 @@ if [ -f ${HOME}/.bashrc ]; then
         echo -e "\n\n################################" >> ${HOME}/.bashrc
         echo "# appended using setup-dotfiles.sh - ${NOW}" >> ${HOME}/.bashrc
         echo -e "################################\n" >> ${HOME}/.bashrc
-        echo "export JD_CONFIG=\"${SETUP_ROOT}/jd-config\"" >> ${HOME}/.bashrc
+        echo "export JD_CONFIG=\"${JD_CONFIG}\"" >> ${HOME}/.bashrc
+        echo "export JD_WORKSPACE=\"${JD_WORKSPACE}\"" >> ${HOME}/.bashrc
         echo "source ${SETUP_ROOT}/jd-config/.bashrc" >> ${HOME}/.bashrc
 else
         echo "> ${HOME}/.bashrc does not exist"
