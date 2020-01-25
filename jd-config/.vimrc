@@ -16,3 +16,5 @@ call plug#end()
 
 " vim-gitter stuff
 set updatetime=4000
+
+set colorcolumn=81
