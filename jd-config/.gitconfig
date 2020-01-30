@@ -25,3 +25,4 @@
     b = branch
     d = diff
     ds = diff --staged
+    cm = commit -m
