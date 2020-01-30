@@ -10,3 +10,6 @@ alias grep="grep --color"
 alias gitk="gitk --all &"
 
 alias ba="cd ${JD_WORKSPACE}"
+
+alias t="true"
+alias f="false"
