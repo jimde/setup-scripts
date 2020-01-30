@@ -16,7 +16,7 @@ if [ -z ${JD_WORKSPACE+x} ]; then
     echo "Error: missing environment variable: JD_WORKSPACE (path to projects directory)"
 fi
 
-export PATH="$PATH:$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/sfw/bin:/opt/sfw/sbin:/usr/sfw/bin:/usr/fw/sbin"
+export PATH="$PATH:$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/sfw/bin:/opt/sfw/sbin:/usr/sfw/bin:/usr/fw/sbin:/opt/gcc-arm-none-eabi/bin"
 color_prompt=yes
 force_color_prompt=yes
 
