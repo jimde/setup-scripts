@@ -16,3 +16,12 @@
 
 [color]
 	ui = auto
+
+[alias]
+    s = status
+    pr = pull --rebase
+    c = checkout
+    cb = checkout -b
+    b = branch
+    d = diff
+    ds = diff --staged
