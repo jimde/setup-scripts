@@ -13,3 +13,5 @@ alias ba="cd ${JD_WORKSPACE}"
 
 alias t="true"
 alias f="false"
+
+alias cls="clear; ls"

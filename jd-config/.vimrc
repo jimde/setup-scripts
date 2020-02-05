@@ -18,3 +18,6 @@ call plug#end()
 set updatetime=4000
 
 set colorcolumn=81
+
+" https://stackoverflow.com/questions/1562633/setting-vim-whitespace-preferences-by-filetype
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
