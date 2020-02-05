@@ -79,4 +79,12 @@ pmin() {
     fi
 }
 
+jhelp() {
+    echo "jd-config help"
+    echo "pshort(): short prompt"
+    echo "plong(): full prompt"
+    echo "ptog(): toggle between short and full prompt"
+    echo "pmin(): minimal prompt"
+}
+
 PROMPT_COMMAND="shell_prompt"
