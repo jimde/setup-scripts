@@ -1,7 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/buildarea10/jdeng1/wassp-repos/testcases/vxworks653_4x/system/unittests/test_unittest.py'
-let g:netrw_dirhist_2='/buildarea10/jdeng1/vx7-integration/helix/guests/vxworks-7/build/vx653/config/ibll'
-let g:netrw_dirhist_3='/buildarea10/jdeng1/vx7-integration/helix/guests/vxworks-7/build/vx653/config'
-let g:netrw_dirhist_4='/buildarea10/jdeng1/vx7-integration/helix/guests/vxworks-7/pkgs_v2/os/hv/guest_support_vx7/shmem/src/resource'
-let g:netrw_dirhist_5='/buildarea10/jdeng1/wassp-repos/testcases/vxworks653_4x/.git'
+let g:netrw_dirhist_cnt =0
