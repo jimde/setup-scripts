@@ -21,3 +21,4 @@ set colorcolumn=81
 
 " https://stackoverflow.com/questions/1562633/setting-vim-whitespace-preferences-by-filetype
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType css setlocal ts=2 sts=2 sw=2
