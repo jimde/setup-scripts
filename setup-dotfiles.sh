@@ -3,15 +3,21 @@
 # check for env variables
 if [ -z ${JD_CONFIG+x} ]; then
     echo "Error: missing environment variable: JD_CONFIG (path to jd-config directory)"
-    MISSING_ENV=true
+    ENV_ERROR=true
+elif [ ! -d ${JD_CONFIG} ]; then
+    echo "Error: path to JD_CONFIG (${JD_CONFIG}) does not exist..."
+    ENV_ERROR=true
 fi
 
 if [ -z ${JD_WORKSPACE+x} ]; then
     echo "Error: missing environment variable: JD_WORKSPACE (path to projects directory)"
-    MISSING_ENV=true
+    ENV_ERROR=true
+elif [ ! -d ${JD_WORKSPACE} ]; then
+    echo "Error: path to JD_WORKSPACE (${JD_WORKSPACE}) does not exist..."
+    ENV_ERROR=true
 fi
 
-if [ "${MISSING_ENV}" == true ]; then
+if [ "${ENV_ERROR}" == true ]; then
     exit 1
 fi
 
