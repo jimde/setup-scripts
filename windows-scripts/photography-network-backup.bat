@@ -1,7 +1,9 @@
-for /f "tokens=1-3 delims=/ " %%a in ('date /t') do (
-	set _date=%%a%%b%%c
-	)
+set DESTINATION="X:\Photography"
+set RC_FLAGS=/S /E /tee /R:10 /W:10 /MT:8
 
-Robocopy /S /E /tee /R:10 /W:10 /MT:8 /log+:"LOGS\%_date%.log" "." "X:\Photography"
+for /f "tokens=1-3 delims=/ " %%a in ('date /t') do (set _date=%%a%%b%%c)
+for /f "tokens=1-2 delims=/:" %%a in ("%TIME%") do (set _time=%%a%%b)
 
-PAUSE
+robocopy %RC_FLAGS% /log+:"LOGS\%_date%_%_time%.log" "." "%DESTINATION%"
+
+pause
