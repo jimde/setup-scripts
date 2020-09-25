@@ -9,5 +9,6 @@
   "editor.renderWhitespace": "boundary",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.codeActionsOnSave": null
 }

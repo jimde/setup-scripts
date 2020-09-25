@@ -29,3 +29,10 @@ source ${JD_CONFIG}/common-alias
 # Set prompt colours
 
 source ${JD_CONFIG}/prompt-colours
+
+# System-specific overrides
+
+if [ -f ~/.bashrc-overrides ]; then
+    . ~/.bashrc-overrides
+fi
+
