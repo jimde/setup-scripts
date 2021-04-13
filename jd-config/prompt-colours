@@ -40,11 +40,17 @@ shell_prompt() {
         PROMPT_SHLVL="${RESET}${YELLOW}[${SHLVL}]${RESET}"
     fi
 
+    if [[ -z "${VIRTUAL_ENV}" ]]; then
+        PYTHON_VENV=""
+    else
+        PYTHON_VENV="${MAGENTA}(`basename \"${VIRTUAL_ENV}\"`)"
+    fi
+
     PROMPT_GIT="${MAGENTA} $(parse_git_branch)"
 
     #PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}${GREEN}\u@\h${WHITE}: ${BLUE}\w${WHITE}${MAGENTA}\$(parse_git_branch)${PROMPT_SHLVL}${PROMPT_STATUS}${WHITE}\$ "
 
-    PS1="${PROMPT_USER}@${PROMPT_HOST}${WHITE}: ${PROMPT_PATH}${WHITE}${PROMPT_GIT}${PROMPT_SHLVL}${PROMPT_STATUS}${WHITE}\$ "
+    PS1="${PYTHON_VENV}${PROMPT_USER}@${PROMPT_HOST}${WHITE}: ${PROMPT_PATH}${WHITE}${PROMPT_GIT}${PROMPT_SHLVL}${PROMPT_STATUS}${WHITE}\$ "
     PS4="\$"
 }
 
