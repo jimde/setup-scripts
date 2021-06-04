@@ -1,6 +1,7 @@
 ## pavucontrol
 
 - install `pavucontrol`
+- https://thelinuxexperiment.com/pulseaudio-monitoring-your-line-in-interface/
 
 
 ## set up virtual sink
